@@ -1,4 +1,47 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'DM Serif Display', serif; */
+    font-size: 20px;
+}
+
+#banner{
+    background-image: url(../images/73698_cropped_sm.png);
+    padding: .5em;
+    color: white;
+    text-align: left;
+    text-shadow: 2px 2px rgba(248, 7, 7, 0.5);
+    font-size: 50px;
+    font-weight: 400;
+    font-family: 'DM Serif Display', serif;
+}
+
+#welcome{
+    background-color: white;
+    text-align: center;
+    padding-top: .4em;
+    color:  rgba(248, 7, 7);
+}
+
+.anykey{
+    color: blue;
+}
+
+.modal-header {
+    background-image: url(../images/73698_cropped_sm.png);
+    color: white;
+  }
+
+.modal-body h5{
+     color: red;
+}
+  
+#used h4 {
+    color:   rgba(248, 7, 7);
+}
+
+#foot {
+    background-image: url(../images/73698_cropped.png);
+    padding: 1.25em;
+    color: white;
+    text-align: center;
+    font-size: large;
 }

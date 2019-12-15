@@ -16,58 +16,124 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Link to JavaScript file -->
     <link rel="stylesheet" type="text/javascript" href="assets/javascript/game.js">
-    <title>Word Guess Game with Columbo</title>
+    <title>Word Guess Game with Lt. Columbo</title>
 
 </head>
 
 <body>
     <header>
         <div id="banner">
-            Word Guess
+            <p>Word Guess with Lt. Columbo</p>
             <div id="overlay">
-                with Columbo [magnifying glass image]
+
             </div>
         </div>
         <div id="welcome">
-            Welcome + name. + # of Wins + Detective!
-            <div id="anykey">
-                Press any key to play
+            <div>
+                <h2>Welcome Detective<span id="playerName">!</span></h2>
+
             </div>
         </div>
     </header>
     <div id="container">
-        <div class="row border">
-            <div class="col-lg-6 border">
-                Columbo Image, Message, and audio
-            </div>
-            <div class="col-lg-6 bg-light text-dark border">
-                <div class="row border">
-                    Game Word
+        <hr>
+        <div class="anykey text-center">
+            Press any key to get started!
+        </div>
+        <div class="row mx-auto p-3">
+            <div class="col-lg-3 p-3 border-right">
+                <!-- Columbo Image, Message, and audio (Use Card) -->
+                <div class="card w-100 img-fluid">
+                    <img class="card-img-top" src="assets/images/01_columbo.png" alt="Picture of Columbo">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0 text-center">
+                            <p id="quotes">Just one more thing.</p>
+                            <footer class="blockquote-footer">Columbo</footer>
+                        </blockquote>
+                    </div>
                 </div>
-                <div class="row border">
-                    Letter Try Count
+                <div class="text-center pt-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#myModal">
+                        How to Play
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalLabel">How to Play</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="text-left p-3">
+                                        <li>We'll choose a random word and supply a blank space for each letter.</li>
+                                        <li>Click a letter on your keyboard to enter your guesses and fill in the
+                                            blanks.
+                                        </li>
+                                        <li>To win, guess all of the letters in the hidden word before running out of 12
+                                            guesses.</li>
+                                    </ul>
+                                    <h5 class="text-center">Good Luck!</h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary"
+                                        data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-9 p-3">
+                <div class="row pb-5 text-left">
+                    <div class="col-lg-9 text-left">
+                        <h2>Mystery Word</h2>
+                    </div>
+                </div>
+
+                <div class="row pt-5 pb-5 text-left">
+                    <div class="col-lg-9">
+                        <h3>Used Letter Board</h3>
+                    </div>
+                </div>
+                <div class="row pt-5 text-left">
+                    <div class="col-lg-9">
+                        <p>Remaining Guesses:&nbsp;#</p>
+                        <div class="progress" style="height: 30px;">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 1%"
+                                aria-valuenow="1" aria-valuemin="0" aria-valuemax="12">1%</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-            <div class="row border">
-                <div class="col-lg-6 border">
-                    How to Play
-                </div>
-                <div class="col-lg-6 bg-light text-dark border">
-                    Used Letter Board
-                </div>
+    </div>
 
-            </div>
-            <div class="row border">
-                <div class="col-lg-12 border">
-                    <button type="button" class="btn btn-danger">Exit</button>
-                </div>
-            </div>
-
+    <div class="row mx-auto pb-2">
+        <div class="col-lg-12 text-center">
+            <button type="button" class="btn btn-outline-danger rounded btn-lg">Exit</button>
         </div>
-        <footer>
-            &copy; 2019 Pamela L. Kelly
-        </footer>
+    </div>
+
+    </div>
+    <div id="foot">
+        <div id="copyright">
+            &copy; Copyright 2019 Pamela L. Kelly
+        </div>
+    </div>
+
+    <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 
 </body>
 
