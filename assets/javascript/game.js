@@ -2,6 +2,7 @@
 var playerName = "";
 var playerWins = 0;
 var countWrongGuesses = 0;
+var exitButton;
 var progress=12;
 var arrUsedLetters = [];
 var arrGameWord =[];
@@ -66,6 +67,10 @@ function youLost() {
     //Call newGame()
 }
 
+//Event Listener
 function exitGame() {
-    //Navigate to a thank you for playing page in the same browser window
+    //Thank user for playing
+    //Navigate back to Portfolio
+    alert("Thank you for playing!");
+    window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
 }

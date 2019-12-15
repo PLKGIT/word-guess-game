@@ -14,10 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- Link to My Style CSS file -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- Link to JavaScript file -->
-    <link rel="stylesheet" type="text/javascript" href="assets/javascript/game.js">
     <title>Word Guess Game with Lt. Columbo</title>
-
 </head>
 
 <body>
@@ -107,8 +104,8 @@
                     <div class="col-lg-9">
                         <p>Remaining Guesses:&nbsp;#</p>
                         <div class="progress" style="height: 30px;">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 1%"
-                                aria-valuenow="1" aria-valuemin="0" aria-valuemax="12">1%</div>
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 1%" aria-valuenow="1"
+                                aria-valuemin="0" aria-valuemax="12">1%</div>
                         </div>
                     </div>
                 </div>
@@ -118,7 +115,8 @@
 
     <div class="row mx-auto pb-2">
         <div class="col-lg-12 text-center">
-            <button type="button" class="btn btn-outline-danger rounded btn-lg">Exit</button>
+            <button type="button" class="btn btn-outline-danger rounded btn-lg" id="exitBtn"
+                onclick="exitGame()">Exit</button>
         </div>
     </div>
 
@@ -129,10 +127,21 @@
         </div>
     </div>
 
+
     <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Link to My JavaScript file -->
+    <script src="assets/javascript/game.js" rel="stylesheet" type="text/javascript"></script>
+    <!-- <script>
+        function exitGame() {
+            //Thank user for playing and navigate back to Portfolio
+            console.log("Button Clicked");
+            alert("Thank you for playing!");
+            window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
+        }
+    </script> -->
 
 
 </body>
