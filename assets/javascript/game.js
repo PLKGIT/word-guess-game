@@ -95,6 +95,8 @@ document.onkeyup = function () {
 
 }
 
+// pickLetter() function
+
 function pickLetter() {
 
     // Process Players Chosen Letters
@@ -207,6 +209,8 @@ function pickLetter() {
             //Call newGame()
             newGame();
         }
+
+        // New Game Function
 
         function newGame() {
             //Clear Game Word Board
