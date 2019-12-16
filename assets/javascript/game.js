@@ -71,6 +71,11 @@ function initSession() {
     //Hide Progress Bar
     document.getElementById("progBar").style.display = "none";
 
+    
+    //Hide Game Word Panel until pickLetter () or newGame() function begins
+    document.getElementById("wordPanel").style.display = "none";
+
+
     //Select new random word from arrRandomWords
     arrGameWord = arrRandomWords[Math.floor(Math.random() * arrRandomWords.length - 1) + 1];
 
@@ -107,7 +112,18 @@ function pickLetter() {
 
     // Process Players Chosen Letters
 
+
     document.onkeyup = function () {
+
+        
+        //Show Progress Bar
+        document.getElementById("progBar").style.display = "block";
+    
+        //Show Word Panel;
+        document.getElementById("wordPanel").style.display = "block";
+
+        //Show Progress Bar
+        document.getElementById("remainPanel").style.display = "block";
 
         //capture player input
 
