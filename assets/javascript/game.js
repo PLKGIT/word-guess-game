@@ -33,6 +33,7 @@ var audioLose = new Audio("assets/audio/womp_womp.mp3");
 /*Tested*/
 userName = prompt("May I know your name?");
 
+//welcomMsg() Function
 //Put player's name in the welcome message
 /*Tested*/
 welcomeMsg();
@@ -67,6 +68,9 @@ function initSession() {
     //Hide Columbo Image/Quote Card
     document.getElementById("winnerPanel").style.display = "none";
 
+    //Hide Progress Bar
+    document.getElementById("progBar").style.display = "none";
+
     //Select new random word from arrRandomWords
     arrGameWord = arrRandomWords[Math.floor(Math.random() * arrRandomWords.length - 1) + 1];
 
@@ -87,6 +91,7 @@ function initSession() {
 
 // Initial event listener for users to click any key
 /*Tested*/
+
 document.onkeyup = function () {
     //Hide "Click Any Key" message
     document.getElementById("pressIt").style.display = "none";
@@ -94,6 +99,7 @@ document.onkeyup = function () {
     pickLetter();
 
 }
+
 
 // pickLetter() function
 
@@ -134,128 +140,127 @@ function pickLetter() {
             letterCheck = arrGameWord.indexOf(picked);
             console.log("Array Index---------------------")
             console.log(letterCheck);
-
-
-            if (letterCheck === -1) {
-
-                //Reduce available tries
-                //Display updated available tries in remainPanel  (HTML)
-                countProgress--;
-                remLetters.textContent = "Remaining Tries: " + countProgress;
-
-            }
-
-            else {
-
-                //add all correct letters to arrCorrectLetters
-                //add ll correct letters to wordPanel (HTML)
-
-                arrCorrectLetters.push(picked);
-                console.log("Correct Letter Array---------------------")
-                console.log(arrCorrectLetters);
-            }
         }
 
+        if (letterCheck === -1) {
 
-        // You Won Function
-        /* Tested */
-
-        function youWon() {
-
-            //Select Random quote from arrRandomQuote
-            var genQuote = arrRandomQuotes[Math.floor(Math.random() * arrRandomQuotes.length - 1) + 1];
-            winQuote.textContent = genQuote;
-            // console.log(genQuote);
-            // console.log(winQuote);
-
-            // Select Random image from arrRandomImage
-            // <img class="card-img-top" src="assets/images/11_columbo.jpg" alt="Picture of Columbo"></img>
-            var genImage = arrRandomImages[Math.floor(Math.random() * arrRandomImages.length - 1) + 1];
-            console.log(genImage);
-
-            var elem = document.createElement("img");
-            elem.setAttribute("src", genImage);
-            elem.setAttribute("class", "card-img-top");
-            elem.setAttribute("alt", "Picture of Columbo");
-            document.getElementById("images").With(elem);
-            // console.log(elem);
-
-            //Display Columbo Card
-            document.getElementById("winnerPanel").style.display = "block";
-            // Play Columbo Theme
-            audioWin.play();
-            //Add one to playerWins
-            countWins++;
-            //Update Wins in HTML
-            winTotal.textContent = " You've won " + countWins + " game(s)!";
-            console.log(countWins);
-            //Alert "You cracked the case!"
-            alert("You cracked the case Detective!");
-            //Call newGame()
-            newGame();
-        }
-
-        // You Lost Function
-        /* Tested */
-
-        function youLost() {
-
-            //Hide Columbo Image/Quote Card
-            document.getElementById("winnerPanel").style.display = "none";
-            //Play whomp whomp
-            audioLose.play();
-            //Alert "Sorry, better luck next time."
-            alert("Sorry, better luck next time Detective!");
-            //Call newGame()
-            newGame();
-        }
-
-        // New Game Function
-
-        function newGame() {
-            //Clear Game Word Board
-            gameBoard.textContent = null;
-            //Clear Used Letters Board
-            usedBoard.textContent = null;
-            //Clear Used Letters Board
-            remLetters.textContent = null;
-            //Reset Wrong Guesses counter and Used and Correct Letter Arrays
-            countWrongGuesses = 0;
-            arrUsedLetters = [];
-            arrCorrectLetters = [];
-            //Reset Status Bar to 12 chances
-            TBD
-            //Reset Progress Counter to 12
-            countProgress = 12;
-            //Select new random word from arrRandomWords
-            arrGameWord = arrRandomWords[Math.floor(Math.random() * arrRandomWords.length - 1) + 1];
-            console.log(arrGameWord);
-
-            var theDiv;
-            var content;
-
-            for (var i = 0; i < arrGameWord.length; i++) {
-                //create blanks for letters
-                theDiv = document.getElementById("wordPanel");
-                content = "<button class='btn btn-outline-info btn-lg border-top-0 border-left-0 border-right-0 id='"
-                content += i + "'> </button> "
-                theDiv.innerHTML += content;
-            }
-
-            //call pickLetter()
-            pickLetter();
+            //Reduce available tries
+            //Display updated available tries in remainPanel  (HTML)
+            countProgress--;
+            remLetters.textContent = "Remaining Tries: " + countProgress;
 
         }
 
+        else {
 
-        // Exit button
-        /* Tested */
+            //add all correct letters to arrCorrectLetters
+            //add ll correct letters to wordPanel (HTML)
 
-        function exitGame() {
-            //Thank user for playing and navigate them to my Bootstrap Portfolio
-            /*Tested*/
-            alert("Thank you for playing!");
-            window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
+            arrCorrectLetters.push(picked);
+            console.log("Correct Letter Array---------------------")
+            console.log(arrCorrectLetters);
         }
+    }
+}
 
 
+// You Won Function
+/* Tested */
+
+function youWon() {
+
+    //Select Random quote from arrRandomQuote
+    var genQuote = arrRandomQuotes[Math.floor(Math.random() * arrRandomQuotes.length - 1) + 1];
+    winQuote.textContent = genQuote;
+    // console.log(genQuote);
+    // console.log(winQuote);
+
+    // Select Random image from arrRandomImage
+    // <img class="card-img-top" src="assets/images/11_columbo.jpg" alt="Picture of Columbo"></img>
+    var genImage = arrRandomImages[Math.floor(Math.random() * arrRandomImages.length - 1) + 1];
+    console.log(genImage);
+
+    var elem = document.createElement("img");
+    elem.setAttribute("src", genImage);
+    elem.setAttribute("class", "card-img-top");
+    elem.setAttribute("alt", "Picture of Columbo");
+    document.getElementById("images").With(elem);
+    // console.log(elem);
+
+    //Display Columbo Card
+    document.getElementById("winnerPanel").style.display = "block";
+    // Play Columbo Theme
+    audioWin.play();
+    //Add one to playerWins
+    countWins++;
+    //Update Wins in HTML
+    winTotal.textContent = " You've won " + countWins + " game(s)!";
+    console.log(countWins);
+    //Alert "You cracked the case!"
+    alert("You cracked the case Detective!");
+    //Call newGame()
+    newGame();
+}
+
+// You Lost Function
+/* Tested */
+
+function youLost() {
+
+    //Hide Columbo Image/Quote Card
+    document.getElementById("winnerPanel").style.display = "none";
+    //Play whomp whomp
+    audioLose.play();
+    //Alert "Sorry, better luck next time."
+    alert("Sorry, better luck next time Detective!");
+    //Call newGame()
+    newGame();
+}
+
+// New Game Function
+
+function newGame() {
+    //Clear Game Word Board
+    gameBoard.textContent = null;
+    //Clear Used Letters Board
+    usedBoard.textContent = null;
+    //Clear Used Letters Board
+    remLetters.textContent = null;
+    //Reset Wrong Guesses counter and Used and Correct Letter Arrays
+    countWrongGuesses = 0;
+    arrUsedLetters = [];
+    arrCorrectLetters = [];
+    //Reset Status Bar to 12 chances
+    TBD
+    //Reset Progress Counter to 12
+    countProgress = 12;
+    //Select new random word from arrRandomWords
+    arrGameWord = arrRandomWords[Math.floor(Math.random() * arrRandomWords.length - 1) + 1];
+    console.log(arrGameWord);
+
+    var theDiv;
+    var content;
+
+    for (var i = 0; i < arrGameWord.length; i++) {
+        //create blanks for letters
+        theDiv = document.getElementById("wordPanel");
+        content = "<button class='btn btn-outline-info btn-lg border-top-0 border-left-0 border-right-0 id='"
+        content += i + "'> </button> "
+        theDiv.innerHTML += content;
+    }
+
+    //call pickLetter()
+    pickLetter();
+
+}
+
+
+// Exit button
+/* Tested */
+
+function exitGame() {
+    //Thank user for playing and navigate them to my Bootstrap Portfolio
+    /*Tested*/
+    alert("Thank you for playing!");
+    window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
+}
