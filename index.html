@@ -19,36 +19,38 @@
 
 <body>
     <header>
+        <!-- Page Banner -->
         <div id="banner">
             <p>Word Guess with Lt. Columbo</p>
-            <div id="overlay">
-
-            </div>
         </div>
+        <!-- Customized Message Under the Banner-->
         <div id="welcome">
             <div>
-                <h2>Welcome Detective<span id="playerName">!</span></h2>
-
+                <h4>WELCOME DETECTIVE<span id="playerName"></span></h4>
             </div>
         </div>
     </header>
     <div id="container">
         <hr>
         <div class="anykey text-center">
-            Press any key to get started!
+            <span id="pressIt">Press any key to get started!</span>
         </div>
         <div class="row mx-auto p-3">
             <div class="col-lg-3 p-3 border-right">
                 <!-- Columbo Image, Message, and audio (Use Card) -->
-                <div class="card w-100 img-fluid">
-                    <img class="card-img-top" src="assets/images/01_columbo.png" alt="Picture of Columbo">
-                    <div class="card-body">
-                        <blockquote class="blockquote mb-0 text-center">
-                            <p id="quotes">Just one more thing.</p>
-                            <footer class="blockquote-footer">Columbo</footer>
-                        </blockquote>
+                <div id="winnerPanel">
+
+                    <div class="card w-100 img-fluid">
+                        <img class="card-img-top" src="assets/images/01_columbo.png" alt="Picture of Columbo">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0 text-center">
+                                <p id="quotes">Just one more thing.</p>
+                                <footer class="blockquote-footer">Columbo</footer>
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
+
                 <div class="text-center pt-3">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#myModal">
@@ -92,12 +94,14 @@
                 <div class="row pb-5 text-left">
                     <div class="col-lg-9 text-left">
                         <h2>Mystery Word</h2>
+                        <span id="wordPanel"></span>
                     </div>
                 </div>
 
                 <div class="row pt-5 pb-5 text-left">
                     <div class="col-lg-9">
                         <h3>Used Letter Board</h3>
+                        <span id="usedPanel"></span>
                     </div>
                 </div>
                 <div class="row pt-5 text-left">
@@ -127,22 +131,13 @@
         </div>
     </div>
 
-
+    <!-- All External JavaScript Files -->
     <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Link to My JavaScript file -->
     <script src="assets/javascript/game.js" rel="stylesheet" type="text/javascript"></script>
-    <!-- <script>
-        function exitGame() {
-            //Thank user for playing and navigate back to Portfolio
-            console.log("Button Clicked");
-            alert("Thank you for playing!");
-            window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
-        }
-    </script> -->
-
 
 </body>
 
