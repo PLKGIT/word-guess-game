@@ -115,8 +115,6 @@ function initGame() {
         document.getElementById("usedPanel").style.display = "block";
         // Show Remaining Tries
         document.getElementById("remainPanel").style.display = "block";
-
-
         // Call gamePlay() function
         gamePlay();
     }
@@ -125,10 +123,10 @@ function initGame() {
 // Get the index for all occurrences of a letter in the game word
 
 function getAllIndexes(arr, letter) {
-    arrindexes.length = 0;
+    arr.length = 0;
     for (var i = 0; i < arr.length; i++) {
         if (letter == arr[i])
-            arrindexes.push(i);
+            arrIndexes.push(i);
     };
 };
 
@@ -171,8 +169,8 @@ function gamePlay() {
             getAllIndexes(arrGameWord, picked);
 
             // Replace blank in arrayMixedLetter representing the user's guess with the user's guess
-            for (var i = 0; i < arrindexes.length; i++) {
-                var temp = arrindexes[i];
+            for (var i = 0; i < arrIndexes.length; i++) {
+                var temp = arr[i];
                 arrMixedLetters[temp] = picked;
             }
             var theDiv = "";
@@ -279,8 +277,6 @@ function newGame() {
 
     // Select random word from arrRandomWords
     arrGameWord = arrRandomWords[Math.floor(Math.random() * arrRandomWords.length + 1)];
-    console.log("----Game Word----");
-    console.log(arrGameWord);
 
     // Reset game information on HTML
     gameBoard.textContent = "";
