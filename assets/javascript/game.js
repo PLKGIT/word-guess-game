@@ -170,7 +170,7 @@ function gamePlay() {
 
             // Replace blank in arrayMixedLetter representing the user's guess with the user's guess
             for (var i = 0; i < arrIndexes.length; i++) {
-                var temp = arr[i];
+                var temp = arrIndexes[i];
                 arrMixedLetters[temp] = picked;
             }
             var theDiv = "";
