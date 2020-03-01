@@ -26,30 +26,43 @@
         <!-- Customized Message Under the Banner-->
         <div id="welcome">
             <div>
-                <h4>WELCOME DETECTIVE<span id="playerName"></span></h4>
-                <span id="playerWins"></span>
+                <h4>WELCOME DETECTIVE<span id="playerName"></span><span id="playerWins"></span></h4>
             </div>
         </div>
     </header>
-    <div class="container">
+    <div id="container">
         <hr>
         <div class="anykey text-center">
             <span id="pressIt">Press any key to get started!</span>
         </div>
         <div class="row mx-auto p-3">
             <div class="col-lg-3 p-3 border-right">
+                <!-- Columbo Image, Message, and audio (Use Card) -->
+                <div id="winnerPanel">
+                    <div class="card w-100 img-fluid">
+                        <span id="images"></span>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0 text-center">
+                                <span id="quotes"></span>
+                                <footer class="blockquote-footer">Columbo</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="text-center pt-3">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#myModal">
                         How to Play
                     </button>
-                    <!-- Help Modal -->
-                    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="helpModalLabel">How to Play</h5>
+                                    <h5 class="modal-title" id="modalLabel">How to Play</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -115,80 +128,17 @@
     </div>
     <div id="foot">
         <div id="copyright">
-            &copy; Copyright 2019-2020 Pamela L. Kelly
+            &copy; Copyright 2019 Pamela L. Kelly
         </div>
     </div>
 
-        <!-- Lost Game Modal -->
-        <div class="modal fade" id="lostModal" tabindex="-1" role="dialog" aria-labelledby="lostModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="lostModalLabel">Sorry, You Lost!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="text-left p-3">
-                        <div id="winnerPanel">
-                            <div class="card w-100 img-fluid">
-                                <div class="card-body text-danger">
-                                    <h4>Better luck next time detective!</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Won Game Modal -->
-    <div class="modal fade" id="wonModal" tabindex="-1" role="dialog" aria-labelledby="wonModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="wonModalLabel">You Won!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="text-left p-3">
-                        <div id="winnerPanel">
-                            <div class="card w-100 img-fluid">
-                                <div class="card-body">
-                                    <h4 class="text-info">You cracked the case detective!</h4> 
-                                    <span id="images"><img class="card-img-top" src="assets/images/11_columbo.jpg" alt="Picture of Columbo"></img></span>
-                                    <blockquote class="blockquote mb-0 text-center text-primary font-italic">
-                                        <span id="quotes"></span>
-                                        <footer class="blockquote-footer">Columbo</footer>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- All External JavaScript Files -->
     <!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Link to My JavaScript file -->
-    <!-- <script src="assets/javascript/game.js" rel="stylesheet" type="text/javascript"></script> -->
     <script src="assets/javascript/game.js" rel="stylesheet" type="text/javascript"></script>
-
 
 </body>
 
