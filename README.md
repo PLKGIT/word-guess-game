@@ -92,9 +92,9 @@ Full-Stack Coding Bootcamp through UCB Extension
 
 ### Completed Assignment URLs
 #### Github repository
-[Github Link](https://github.com/PLKGIT/Word-Guess-Game) at https://github.com/PLKGIT/Word-Guess-Game
+[Github Link](https://github.com/PLKGIT/word-guess-game) at https://github.com/PLKGIT/word-guess-game
 #### Deployed Game
-[Word Guess Game](https://plkgit.github.io/Word-Guess-Game/) deployed at https://plkgit.github.io/Word-Guess-Game/
+[Word Guess Game](https://plkgit.github.io/word-guess-game/) deployed at https://plkgit.github.io/word-guess-game/
 
 #### Portfolio pages on Professional and Bootstrap portfolios with links to the game
 [Professional Porfolio](https://www.pamkelly.com/portdev.html) at https://www.pamkelly.com/portdev.html

@@ -184,7 +184,7 @@ function gamePlay() {
 
             // Count remaining letters to be guessed and set counter
             getAllIndexes(arrMixedLetters, "_");
-            countCorrect = arrindexes.length;
+            countCorrect = arrIndexes.length;
         }
         // Call gameCheck() function
         gameCheck()
