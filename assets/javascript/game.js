@@ -149,11 +149,15 @@ function gamePlay() {
         // console.log("---Picked---");
         // console.log(picked);
 
+        getAllIndexes(arrUsedLetters, picked);
+
+        if (indexes.length === 0 ){
+
         // Push used letter to arrUsedLetters
         arrUsedLetters.push(picked);
         // console.log("---Used Letters---");
         // console.log(arrUsedLetters);
-
+        
         // Display arrUsedLetters letters on usedPanel
         var theDiv;
         var content = " ";
@@ -162,6 +166,10 @@ function gamePlay() {
             theDiv = document.getElementById("usedPanel");
             content += arrUsedLetters[i] + " "
             theDiv.innerHTML = content.toUpperCase();
+        }
+
+        } else {
+            alert("Sorry, but you've already guessed that letter!")
         }
 
         // Check whether user guess appears in game word
