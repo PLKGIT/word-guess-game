@@ -38,7 +38,7 @@ var gameImage = document.getElementById("images");
 var arrUsedLetters = [];
 var arrMixedLetters = [];
 var arrGameWord = [];
-var arrIndexes = [];
+var indexes = [];
 
 // Logic
 // -------------------------------------------------------
@@ -81,7 +81,12 @@ function initGame() {
     document.getElementById("progBar").style.display = "none";
 
     // Select random word from arrRandomWords
-    arrGameWord = arrRandomWords[Math.floor(Math.random() * arrRandomWords.length)];
+    var randomNumber = Math.floor(Math.random() * arrRandomWords.length);
+    console.log("---Random Number---");
+    console.log(randomNumber);
+    arrGameWord = arrRandomWords[randomNumber];
+    console.log("---GameWord---");
+    console.log(arrGameWord);
 
     // Reset game information on HTML
     gameBoard.textContent = "";
@@ -96,12 +101,16 @@ function initGame() {
     for (var i = 0; i < arrGameWord.length; i++) {
         arrMixedLetters.push("_");
     }
+    console.log("---Mixed Letter---");
+    console.log(arrMixedLetters);
+
     // Display array of blanks in Game Word Panel
     for (var i = 0; i < arrMixedLetters.length; i++) {
         theDiv = document.getElementById("wordPanel");
         content += arrMixedLetters[i] + " "
         theDiv.textContent = content;
     }
+
     // Initial event listener for users to click any key
     document.onkeyup = function () {
         // Hide "Click Any Key" message after any key clicked
@@ -123,12 +132,13 @@ function initGame() {
 // Get the index for all occurrences of a letter in the game word
 
 function getAllIndexes(arr, letter) {
-    arr.length = 0;
+    indexes.length = 0;
     for (var i = 0; i < arr.length; i++) {
         if (letter == arr[i])
-            arrIndexes.push(i);
+            indexes.push(i);
     };
 };
+
 
 // Play the game
 function gamePlay() {
@@ -137,12 +147,20 @@ function gamePlay() {
         // Set player input to a variable
         picked = event.key;
 
+
+        console.log("---Picked---");
+        console.log(picked);
+
         // Push used letter to arrUsedLetters
         arrUsedLetters.push(picked);
 
+
+        console.log("---Used Letters---");
+        console.log(arrUsedLetters);
+
         // Display arrUsedLetters letters on usedPanel
         var theDiv;
-        var content = "";
+        var content = " ";
 
         for (var i = 0; i < arrUsedLetters.length; i++) {
             theDiv = document.getElementById("usedPanel");
@@ -152,6 +170,9 @@ function gamePlay() {
 
         // Check whether user guess appears in game word
         letterCheck = arrGameWord.indexOf(picked);
+
+        console.log("---Letter Check---");
+        console.log(letterCheck);
 
         // If not, lower and update remaining tries counter and progress bar
         if (letterCheck === -1) {
@@ -168,11 +189,20 @@ function gamePlay() {
             // Id the index for each occurence of the user's guess
             getAllIndexes(arrGameWord, picked);
 
+            console.log("---Indexes after correct letter---");
+            console.log(indexes);
             // Replace blank in arrayMixedLetter representing the user's guess with the user's guess
-            for (var i = 0; i < arrIndexes.length; i++) {
-                var temp = arrIndexes[i];
+            for (var i = 0; i < indexes.length; i++) {
+                var temp = indexes[i];
                 arrMixedLetters[temp] = picked;
             }
+
+
+            console.log("---Temp---");
+            console.log(temp);
+            console.log("---Mixed Letters---");
+            console.log(arrMixedLetters);
+
             var theDiv = "";
             var content = " ";
             // Display arrayMixedLetter in Game Word Panel
@@ -181,10 +211,15 @@ function gamePlay() {
                 content += arrMixedLetters[i] + " "
                 theDiv.textContent = content.toUpperCase();
             }
-
             // Count remaining letters to be guessed and set counter
             getAllIndexes(arrMixedLetters, "_");
-            countCorrect = arrIndexes.length;
+            console.log("---Index for Underscore---");
+            console.log(indexes);
+            countCorrect = indexes.length;
+
+            console.log("---Count Correct---");
+            console.log(countCorrect);
+
         }
         // Call gameCheck() function
         gameCheck()
@@ -199,7 +234,7 @@ function gameCheck() {
         youLost();
     }
     // Check to see if user has guessed all the word letters and won
-    else if (countProgress > 0 && countCorrect === 0) {
+    else if (countProgress !== 0 && countCorrect === 0) {
         // Call youWon() function
         youWon();
     }
@@ -212,6 +247,7 @@ function gameCheck() {
 
 // If user lost, play sound and message
 function youLost() {
+    // Reset underscore counter
     countCorrect = -1;
     // Play whomp whomp
     audioLose.play();
@@ -223,25 +259,28 @@ function youLost() {
 
 // If user won, play sound and message
 function youWon() {
+    // Reset underscore counter
     countCorrect = -1;
-    //Add 1 to playerWins
+    // Add 1 to player's win count
     countWins++;
     // Update Wins count in banner
     if (countWins > 1) {
         winTotal.innerHTML = " You've won " + countWins + " game(s)!"
     } else {
         winTotal.innerHTML = " You've won " + countWins + " game!"
-    }
+    };
 
     // Play Columbo Theme
     audioWin.play();
     // Select Random image from arrRandomImage
-    var genImage = arrRandomImages[Math.floor(Math.random() * arrRandomImages.length + 1)];
+    var genImage = arrRandomImages[Math.floor(Math.random() * arrRandomImages.length)];
+    console.log(genImage);
     // Display image tag with random image
     var ranImages = "<img class='card-img-top' src='" + genImage + "' alt='Picture of Columbo'></img>";
     images.innerHTML = ranImages;
     // Select Random quote from arrRandomQuote
-    var genQuote = arrRandomQuotes[Math.floor(Math.random() * arrRandomQuotes.length + 1)];
+    var genQuote = arrRandomQuotes[Math.floor(Math.random() * arrRandomQuotes.length)];
+    console.log(genQuote);
     // Display random quote
     winQuote.innerHTML = genQuote;
     // Launch You Won Modal
@@ -261,10 +300,10 @@ function newGame() {
     countCorrect = -1;
 
     // Reset Arrays
-    arrUsedLetters = [];
-    arrMixedLetters = [];
-    arrGameWord = [];
-    arrIndexes = [];
+    arrUsedLetters.length = 0;
+    arrMixedLetters.length = 0;
+    arrGameWord.length = 0;
+    indexes.length = 0;
 
     // Hide Game Word Panel
     document.getElementById("wordPanel").style.display = "none";
@@ -276,7 +315,12 @@ function newGame() {
     document.getElementById("progBar").style.display = "none";
 
     // Select random word from arrRandomWords
-    arrGameWord = arrRandomWords[Math.floor(Math.random() * arrRandomWords.length + 1)];
+    var randomNumber = Math.floor(Math.random() * arrRandomWords.length);
+    console.log("---Random Number---");
+    console.log(randomNumber);
+    arrGameWord = arrRandomWords[randomNumber];
+    console.log("---GameWord---");
+    console.log(arrGameWord);
 
     // Reset game information on HTML
     gameBoard.textContent = "";
@@ -318,11 +362,8 @@ function newGame() {
 
 
 // Exit button
-/* Tested */
-
 function exitGame() {
     //Thank user for playing and navigate them to my Bootstrap Portfolio
-    /*Tested*/
     alert("Thank you for playing!");
     window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
 }
