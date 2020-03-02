@@ -82,11 +82,11 @@ function initGame() {
 
     // Select random word from arrRandomWords
     var randomNumber = Math.floor(Math.random() * arrRandomWords.length);
-    console.log("---Random Number---");
-    console.log(randomNumber);
+    // console.log("---Random Number---");
+    // console.log(randomNumber);
     arrGameWord = arrRandomWords[randomNumber];
-    console.log("---GameWord---");
-    console.log(arrGameWord);
+    // console.log("---GameWord---");
+    // console.log(arrGameWord);
 
     // Reset game information on HTML
     gameBoard.textContent = "";
@@ -101,8 +101,8 @@ function initGame() {
     for (var i = 0; i < arrGameWord.length; i++) {
         arrMixedLetters.push("_");
     }
-    console.log("---Mixed Letter---");
-    console.log(arrMixedLetters);
+    // console.log("---Mixed Letter---");
+    // console.log(arrMixedLetters);
 
     // Display array of blanks in Game Word Panel
     for (var i = 0; i < arrMixedLetters.length; i++) {
@@ -146,17 +146,13 @@ function gamePlay() {
     document.onkeyup = function () {
         // Set player input to a variable
         picked = event.key;
-
-
-        console.log("---Picked---");
-        console.log(picked);
+        // console.log("---Picked---");
+        // console.log(picked);
 
         // Push used letter to arrUsedLetters
         arrUsedLetters.push(picked);
-
-
-        console.log("---Used Letters---");
-        console.log(arrUsedLetters);
+        // console.log("---Used Letters---");
+        // console.log(arrUsedLetters);
 
         // Display arrUsedLetters letters on usedPanel
         var theDiv;
@@ -170,9 +166,8 @@ function gamePlay() {
 
         // Check whether user guess appears in game word
         letterCheck = arrGameWord.indexOf(picked);
-
-        console.log("---Letter Check---");
-        console.log(letterCheck);
+        // console.log("---Letter Check---");
+        // console.log(letterCheck);
 
         // If not, lower and update remaining tries counter and progress bar
         if (letterCheck === -1) {
@@ -188,20 +183,17 @@ function gamePlay() {
         else {
             // Id the index for each occurence of the user's guess
             getAllIndexes(arrGameWord, picked);
-
-            console.log("---Indexes after correct letter---");
-            console.log(indexes);
+            // console.log("---Indexes after correct letter---");
+            // console.log(indexes);
             // Replace blank in arrayMixedLetter representing the user's guess with the user's guess
             for (var i = 0; i < indexes.length; i++) {
                 var temp = indexes[i];
                 arrMixedLetters[temp] = picked;
             }
-
-
-            console.log("---Temp---");
-            console.log(temp);
-            console.log("---Mixed Letters---");
-            console.log(arrMixedLetters);
+            // console.log("---Temp---");
+            // console.log(temp);
+            // console.log("---Mixed Letters---");
+            // console.log(arrMixedLetters);
 
             var theDiv = "";
             var content = " ";
@@ -213,12 +205,11 @@ function gamePlay() {
             }
             // Count remaining letters to be guessed and set counter
             getAllIndexes(arrMixedLetters, "_");
-            console.log("---Index for Underscore---");
-            console.log(indexes);
+            // console.log("---Index for Underscore---");
+            // console.log(indexes);
             countCorrect = indexes.length;
-
-            console.log("---Count Correct---");
-            console.log(countCorrect);
+            // console.log("---Count Correct---");
+            // console.log(countCorrect);
 
         }
         // Call gameCheck() function
@@ -265,7 +256,7 @@ function youWon() {
     countWins++;
     // Update Wins count in banner
     if (countWins > 1) {
-        winTotal.innerHTML = " You've won " + countWins + " game(s)!"
+        winTotal.innerHTML = " You've won " + countWins + " games!"
     } else {
         winTotal.innerHTML = " You've won " + countWins + " game!"
     };
@@ -316,11 +307,11 @@ function newGame() {
 
     // Select random word from arrRandomWords
     var randomNumber = Math.floor(Math.random() * arrRandomWords.length);
-    console.log("---Random Number---");
-    console.log(randomNumber);
+    // console.log("---Random Number---");
+    // console.log(randomNumber);
     arrGameWord = arrRandomWords[randomNumber];
-    console.log("---GameWord---");
-    console.log(arrGameWord);
+    // console.log("---GameWord---");
+    // console.log(arrGameWord);
 
     // Reset game information on HTML
     gameBoard.textContent = "";

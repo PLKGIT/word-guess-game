@@ -22,7 +22,8 @@ body {
 }
 
 .anykey{
-    color: blue;
+    color:#007bff;
+    font-weight: bolder;
 }
 
 .modal-header {
