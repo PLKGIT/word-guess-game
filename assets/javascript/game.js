@@ -363,6 +363,6 @@ function newGame() {
 // Exit button
 function exitGame() {
     //Thank user for playing and navigate them to my Bootstrap Portfolio
-    alert("Thank you for playing!");
-    window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
+    alert("Thank you for playing Word Guess with Lt. Columbo detective!");
+    window.location.href = 'https://www.pamkelly.com/portdev.html';
 }
