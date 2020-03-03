@@ -7,8 +7,8 @@
 
 // Seeded Arrays
 var arrProgress = [[0, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-danger' style='width: 1%' aria-valuenow='0' >1%</div></div>"], [1, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-danger' style='width: 9%' aria-valuenow='1'>9%</div></div>"], [2, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-danger' style='width: 17%' aria-valuenow='2' >17%</div></div>"], [3, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-warning' style='width: 25%' aria-valuenow='3' >25%</div></div>"], [4, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-warning' style='width: 33%' aria-valuenow='4' >33%</div></div>"], [5, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-warning' style='width: 41%' aria-valuenow='5' >41%</div></div>"], [6, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-info' style='width: 50%' aria-valuenow='6' >50%</div></div>"], [7, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-info' style='width: 58%' aria-valuenow='7' >58%</div></div>"], [8, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-info' style='width: 66%' aria-valuenow='8' >66%</div></div>"], [9, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-success' style='width: 75%' aria-valuenow='3' >75%</div></div>"], [10, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-success' style='width: 83%' aria-valuenow='10' >83%</div></div>"], [11, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-success' style='width: 92%' aria-valuenow='11' >92%</div></div>"], [12, "<div class='progress' style='height: 30px;'><div role='progressbar' aria-valuemin='0' aria-valuemax='12' class='progress-bar bg-success' style='width: 100%' aria-valuenow='12' >100%</div></div>"]];
-var arrRandomWords = ["global", "adjust", "middleware", "seize", "deposit", "awkward", "look", "notebook","fare", "bush", "disposition", "fade", "monopoly", "carved", "yachtsman", "fashionable", "expand", "xylophone", "trunk", "sailing", "enter", "soak", "inspector", "woman", "shoelace","transform", "loop", "shortage", "knapsack", "sinking", "jinx", "sofa", "poorly", "ignorance", "fjord", "pride", "marriage", "relate", "weeds", "accidental", "diplomat", "cottage", "numbskull", "attention","voyeurism", "praise", "danger", "literature", "consumption", "umbrella", "buster","westward", "complain", "overcharge", "complexity", "dashing", "dizzying", "voodoo","trace", "tissue", "glockenspiel", "constraint", "triphthong","sunday", "quarter","basketball", "wristwatch", "visitor", "organization", "atmosphere", "contain", "index", "finger", "concession", "joint", "whizzing", "light", "partner", "abandon", "pasture", "salsa", "hypnotize", "dialogue", "jazziest", "license","zephyr", "office", "printer", "electrician","common", "complexion", "razzmatazz"];
-var arrRandomQuotes = ["Just one more thing.", "My ears pop in an elevator. As a matter if fact, I don’t even like being this tall.", "I knew you could do it.", "I can't think in this coat.", "I'm hanging up.  You can keep talkin' but I'm gonna hang up.", "I can't swim, I don't even like a deep tub.", "I worry. I mean, little things bother me. I'm a worrier. I mean, little insignificant", "I respect your talent, but I don't like anything else about you.", "Before coffee, I'm up and walkin' around but I'm not awake.", "There are a couple of loose ends I'd like to tie up. Nothing important you understand.", "My wife always calls about some errand at the grocery store.", "I'm always getting you angry, it must be my accent or something.", "Sometimes I even wonder about my wife, not that she's a crackpot.","I worry. I mean, little things bother me. I'm a worrier. I mean, little insignificant details - I lose my appetite. I can't eat. "];
+var arrRandomWords = ["global", "adjust", "middleware", "seize", "deposit", "awkward", "look", "notebook", "fare", "bush", "disposition", "fade", "monopoly", "carved", "yachtsman", "fashionable", "expand", "xylophone", "trunk", "sailing", "enter", "soak", "inspector", "woman", "shoelace", "transform", "loop", "shortage", "knapsack", "sinking", "jinx", "sofa", "poorly", "ignorance", "fjord", "pride", "marriage", "relate", "weeds", "accidental", "diplomat", "cottage", "numbskull", "attention", "voyeurism", "praise", "danger", "literature", "consumption", "umbrella", "buster", "westward", "complain", "overcharge", "complexity", "dashing", "dizzying", "voodoo", "trace", "tissue", "glockenspiel", "constraint", "triphthong", "sunday", "quarter", "basketball", "wristwatch", "visitor", "organization", "atmosphere", "contain", "index", "finger", "concession", "joint", "whizzing", "light", "partner", "abandon", "pasture", "salsa", "hypnotize", "dialogue", "jazziest", "license", "zephyr", "office", "printer", "electrician", "common", "complexion", "razzmatazz"];
+var arrRandomQuotes = ["Just one more thing.", "My ears pop in an elevator. As a matter if fact, I don’t even like being this tall.", "I knew you could do it.", "I can't think in this coat.", "I'm hanging up.  You can keep talkin' but I'm gonna hang up.", "I can't swim, I don't even like a deep tub.", "I worry. I mean, little things bother me. I'm a worrier. I mean, little insignificant", "I respect your talent, but I don't like anything else about you.", "Before coffee, I'm up and walkin' around but I'm not awake.", "There are a couple of loose ends I'd like to tie up. Nothing important you understand.", "My wife always calls about some errand at the grocery store.", "I'm always getting you angry, it must be my accent or something.", "Sometimes I even wonder about my wife, not that she's a crackpot.", "I worry. I mean, little things bother me. I'm a worrier. I mean, little insignificant details - I lose my appetite. I can't eat. "];
 var arrRandomImages = ["assets/images/01_columbo.png", "assets/images/02_columbo.jpg", "assets/images/03_columbo.jpg", "assets/images/04_columbo.jpg", "assets/images/05_columbo.jpg", "assets/images/06_columbo.jpg", "assets/images/07_columbo.jpg", "assets/images/08_columbo.jpg", "assets/images/09_columbo.jpg", "assets/images/10_columbo.jpg", "assets/images/11_columbo.jpg", "assets/images/12_columbo.jpg", "assets/images/13_columbo.jpg", "assets/images/14_columbo.jpg", "assets/images/15_columbo.jpg", "assets/images/16_columbo.jpg", "assets/images/17_columbo.jpg", "assets/images/18_columbo.jpg", "assets/images/19_columbo.jpg", "assets/images/20_columbo.jpg", "assets/images/21_columbo.jpg", "assets/images/22_columbo.jpg", "assets/images/23_columbo.jpg", "assets/images/24_columbo.jpg", "assets/images/25_columbo.jpg", "assets/images/26_columbo.jpg", "assets/images/27_columbo.jpg", "assets/images/28_columbo.jpg"];
 var audioWin = new Audio("assets/audio/columbo_theme.mp3");
 var audioLose = new Audio("assets/audio/womp_womp.mp3");
@@ -19,6 +19,7 @@ var countTries = 0;
 var countCorrect = -1;
 var countProgress = 12;
 var picked = "";
+var alpha = false;
 
 // Prompt player for their name
 var userName = "";
@@ -139,34 +140,50 @@ function getAllIndexes(arr, letter) {
     };
 };
 
+function checkAlpha(value) {
+    alpha = false;
+    var charCode = event.which || event.keyCode;
+    console.log(value);
+    if (charCode > 64 && charCode < 91 || charCode > 96 && charCode < 123) {
+         return alpha = true;
+    }
+    else {
+        return alpha = false;
+    }
+
+}
+
 
 // Play the game
 function gamePlay() {
     // Process Players Chosen Letters
-    document.onkeyup = function () {
+    document.onkeyup = function (event) {
         // Set player input to a variable
         picked = event.key;
         // console.log("---Picked---");
         // console.log(picked);
 
+        checkAlpha(picked);
+        // console.log(picked);
+        // console.log(alpha);
+
+        if (alpha === true) {
         getAllIndexes(arrUsedLetters, picked);
+        if (indexes.length === 0) {
+            // Push used letter to arrUsedLetters
+            arrUsedLetters.push(picked);
+            // console.log("---Used Letters---");
+            // console.log(arrUsedLetters);
 
-        if (indexes.length === 0 ){
+            // Display arrUsedLetters letters on usedPanel
+            var theDiv;
+            var content = " ";
 
-        // Push used letter to arrUsedLetters
-        arrUsedLetters.push(picked);
-        // console.log("---Used Letters---");
-        // console.log(arrUsedLetters);
-        
-        // Display arrUsedLetters letters on usedPanel
-        var theDiv;
-        var content = " ";
-
-        for (var i = 0; i < arrUsedLetters.length; i++) {
-            theDiv = document.getElementById("usedPanel");
-            content += arrUsedLetters[i] + " "
-            theDiv.innerHTML = content.toUpperCase();
-        }
+            for (var i = 0; i < arrUsedLetters.length; i++) {
+                theDiv = document.getElementById("usedPanel");
+                content += arrUsedLetters[i] + " "
+                theDiv.innerHTML = content.toUpperCase();
+            }
 
         } else {
             alert("Sorry, but you've already guessed that letter!")
@@ -222,6 +239,11 @@ function gamePlay() {
         }
         // Call gameCheck() function
         gameCheck()
+
+        } else {
+            alert("Please use letters only!")
+        };
+
     }
 }
 
@@ -273,13 +295,13 @@ function youWon() {
     audioWin.play();
     // Select Random image from arrRandomImage
     var genImage = arrRandomImages[Math.floor(Math.random() * arrRandomImages.length)];
-    console.log(genImage);
+    // console.log(genImage);
     // Display image tag with random image
     var ranImages = "<img class='card-img-top' src='" + genImage + "' alt='Picture of Columbo'></img>";
     images.innerHTML = ranImages;
     // Select Random quote from arrRandomQuote
     var genQuote = arrRandomQuotes[Math.floor(Math.random() * arrRandomQuotes.length)];
-    console.log(genQuote);
+    // console.log(genQuote);
     // Display random quote
     winQuote.innerHTML = genQuote;
     // Launch You Won Modal
